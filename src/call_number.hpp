@@ -2,6 +2,9 @@
 #include <vector>
 using namespace std;
 
+#ifndef CALL_NUMBER_HPP
+#define CALL_NUMBER_HPP
+
 class CallNumber {
     private:
         string className;
@@ -22,3 +25,5 @@ class CallNumber {
 
         string toString();
 };
+
+#endif

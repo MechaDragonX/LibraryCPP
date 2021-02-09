@@ -2,6 +2,9 @@
 #include "call_number.hpp"
 using namespace std;
 
+#ifndef BOOK
+#define BOOK
+
 class Book {
     public:
         string isbn;
@@ -18,3 +21,5 @@ class Book {
 
         void setPublicationYear();
 };
+
+#endif
