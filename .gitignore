@@ -33,3 +33,7 @@
 
 # VS Code
 /.vscode
+
+# Libraries
+/lib/*.h
+/lib/*.hpp
