@@ -1,4 +1,6 @@
-# List of Libraries Used
+# List of Third Party Libraries Used
+
+None of the libraries used will be push to the repository because that is not my code. Below is the information for all the thrid party libraries I used.
 
 ## JSON for Modern C++ by Niels Lohmann
 - [GitHub](https://github.com/nlohmann/json)
