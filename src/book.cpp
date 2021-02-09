@@ -12,14 +12,8 @@ Book::Book() {
     publicationYear = 0;
     pageCount = 0;
 }
-Book::Book(string isbn_value, CallNumber call_number, string author_surname, string title_value, string publisher_value, int page_count) {
-    isbn = isbn_value;
-    callNumber = call_number;
-    authorSurname = author_surname;
-    title = title_value;
-    publisher = publisher_value;
-    pageCount = page_count;
-
+Book::Book(string isbn_value, CallNumber call_number, string author_surname, string title_value, string publisher_value, int page_count) :
+    isbn(isbn_value), callNumber(call_number), authorSurname(author_surname), title(title_value), publisher(publisher_value), pageCount(page_count) {
     setPublicationYear();
 }
 

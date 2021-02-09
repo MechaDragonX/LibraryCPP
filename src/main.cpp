@@ -16,16 +16,22 @@ int main() {
     //         cutIds,
     //         2010
     //     );
-    CallNumber call(
-            "PT",
-            537,
-            "F",
-            21,
-            2010
-        );
+    // CallNumber call(
+    //         "PT",
+    //         537,
+    //         "F",
+    //         21,
+    //         2010
+    //     );
     Book book(
             "978-3-16-148410-0",
-            call,
+            CallNumber(
+                "PT",
+                537,
+                "F",
+                21,
+                2010
+            ),
             "Romanov",
             "A History of Russian Computing",
             "Moscow Company",

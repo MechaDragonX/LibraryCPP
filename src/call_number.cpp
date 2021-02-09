@@ -32,22 +32,15 @@ CallNumber::CallNumber() {
     year = 0;
     fullCallNumber = "";
 }
-CallNumber::CallNumber(string class_name, int class_id, string cutter_name, int cutter_id, int yr) {
-    className = class_name;
-    classId = class_id;
+CallNumber::CallNumber(string class_name, int class_id, string cutter_name, int cutter_id, int yr) :
+    className(class_name), classId(class_id), year(yr) {
     cutterNumbers.push_back("." + cutter_name + to_string(cutter_id));
-    year = yr;
 
     makeClassNumber();
     makeCallNumber();
 }
-CallNumber::CallNumber(string class_name, int class_id, vector<string> cutter_names, vector<int> cutter_ids, int yr) {
-    className = class_name;
-    classId = class_id;
-    cutterNames = cutter_names;
-    cutterIds = cutter_ids;
-    year = yr;
-
+CallNumber::CallNumber(string class_name, int class_id, vector<string> cutter_names, vector<int> cutter_ids, int yr) :
+    className(class_name), classId(class_id), cutterNames(cutter_names), cutterIds(cutter_ids), year(yr) {
     makeClassNumber();
     makeCutterNumbers();
     makeCallNumber();
