@@ -14,10 +14,12 @@ class CallNumber {
 
         void makeClassNumber();
         void makeCutterNumbers();
+        void makeCallNumber();
     public:
         string classNumber;
         vector<string> cutterNumbers;
         int year;
+        string fullCallNumber;
 
         CallNumber();
         CallNumber(string class_name, int class_id, string cutter_name, int cutter_id, int yr);

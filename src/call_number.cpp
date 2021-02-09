@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 #include "call_number.hpp"
 using namespace std;
@@ -11,6 +12,13 @@ void CallNumber::makeCutterNumbers() {
         cutterNumbers.push_back("." + cutterNames[i] + to_string(cutterIds[i]));
     }
 }
+void CallNumber::makeCallNumber() {
+    fullCallNumber = classNumber;
+    for(string str : cutterNumbers) {
+        fullCallNumber += str;
+    }
+    fullCallNumber += " " + to_string(year);
+}
 
 // Public
 CallNumber::CallNumber() {
@@ -22,6 +30,7 @@ CallNumber::CallNumber() {
     classNumber = "";
     cutterNumbers = { };
     year = 0;
+    fullCallNumber = "";
 }
 CallNumber::CallNumber(string class_name, int class_id, string cutter_name, int cutter_id, int yr) {
     className = class_name;
@@ -30,6 +39,7 @@ CallNumber::CallNumber(string class_name, int class_id, string cutter_name, int 
     year = yr;
 
     makeClassNumber();
+    makeCallNumber();
 }
 CallNumber::CallNumber(string class_name, int class_id, vector<string> cutter_names, vector<int> cutter_ids, int yr) {
     className = class_name;
@@ -40,13 +50,9 @@ CallNumber::CallNumber(string class_name, int class_id, vector<string> cutter_na
 
     makeClassNumber();
     makeCutterNumbers();
+    makeCallNumber();
 }
 
 string CallNumber::toString() {
-    string result = classNumber;
-    for(string str : cutterNumbers) {
-        result += str;
-    }
-    result += " " + to_string(year);
-    return result;
+    return fullCallNumber;
 }

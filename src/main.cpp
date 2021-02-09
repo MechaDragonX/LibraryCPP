@@ -3,6 +3,7 @@
 #include <vector>
 #include "book.hpp"
 #include "call_number.hpp"
+#include "../lib/json.hpp"
 using namespace std;
 
 int main() {
@@ -22,14 +23,14 @@ int main() {
             21,
             2010
         );
-    // Book book(
-    //         "978-3-16-148410-0",
-    //         call,
-    //         "Romanov",
-    //         "A History of Russian Computing",
-    //         "Moscow Company",
-    //         560
-    //     );
+    Book book(
+            "978-3-16-148410-0",
+            call,
+            "Romanov",
+            "A History of Russian Computing",
+            "Moscow Company",
+            560
+        );
     
-    cout << call.toString() << endl;
+    cout << book.callNumber.fullCallNumber << endl;
 }
