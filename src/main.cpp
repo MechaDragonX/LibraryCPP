@@ -20,13 +20,6 @@ int main() {
     //         &cutIds,
     //         2010
     //     );
-    CallNumber call(
-            "PT",
-            537,
-            "F",
-            21,
-            2010
-        );
     Book book(
             "978-3-16-148410-0",
             CallNumber(
