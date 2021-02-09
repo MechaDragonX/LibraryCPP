@@ -42,5 +42,9 @@ int main() {
             560
         );
     
-    cout << book.callNumber.fullCallNumber << endl;
+    cout << "ISBN: " + book.isbn << endl;
+    cout << "Call Number: " + book.callNumber.fullCallNumber << endl;
+    cout << "Author's Surname: " + book.authorSurname << endl;
+    cout << "Title: " + book.title << endl;
+    cout << "Number of Pages: " << book.pageCount << endl;
 }
