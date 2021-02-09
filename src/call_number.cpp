@@ -39,12 +39,12 @@ CallNumber::CallNumber(string class_name, int class_id, string cutter_name, int 
     makeClassNumber();
     makeCallNumber();
 }
-CallNumber::CallNumber(string class_name, int class_id, vector<string> cutter_names, vector<int> cutter_ids, int yr) :
-    className(class_name), classId(class_id), cutterNames(cutter_names), cutterIds(cutter_ids), year(yr) {
-    makeClassNumber();
-    makeCutterNumbers();
-    makeCallNumber();
-}
+// CallNumber::CallNumber(string class_name, int class_id, vector<string> cutter_names, vector<int> cutter_ids, int yr) :
+//     className(class_name), classId(class_id), cutterNames(cutter_names), cutterIds(cutter_ids), year(yr) {
+//     makeClassNumber();
+//     makeCutterNumbers();
+//     makeCallNumber();
+// }
 
 string CallNumber::toString() {
     return fullCallNumber;

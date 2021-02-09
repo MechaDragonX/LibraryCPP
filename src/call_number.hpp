@@ -23,7 +23,7 @@ class CallNumber {
 
         CallNumber();
         CallNumber(string class_name, int class_id, string cutter_name, int cutter_id, int yr);
-        CallNumber(string class_name, int class_id, vector<string> cutter_names, vector<int> cutter_ids, int yr);
+        // CallNumber(string class_name, int class_id, vector<string> cutter_names, vector<int> cutter_ids, int yr);
 
         string toString();
 };

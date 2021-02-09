@@ -7,22 +7,26 @@
 using namespace std;
 
 int main() {
-    // vector<string> cutNames = { "F", "Q" };
-    // vector<int> cutIds = { 21, 64 };
+    // vector<string> cutNames = { };
+    // cutNames.push_back("F");
+    // cutNames.push_back("Q");
+    // vector<int> cutIds = { };
+    // cutIds.push_back(21);
+    // cutIds.push_back(64);
     // CallNumber call(
     //         "PT",
     //         537,
-    //         cutNames,
-    //         cutIds,
+    //         &cutNames,
+    //         &cutIds,
     //         2010
     //     );
-    // CallNumber call(
-    //         "PT",
-    //         537,
-    //         "F",
-    //         21,
-    //         2010
-    //     );
+    CallNumber call(
+            "PT",
+            537,
+            "F",
+            21,
+            2010
+        );
     Book book(
             "978-3-16-148410-0",
             CallNumber(
