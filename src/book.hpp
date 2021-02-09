@@ -2,8 +2,8 @@
 #include "call_number.hpp"
 using namespace std;
 
-#ifndef BOOK
-#define BOOK
+#ifndef BOOK_HPP
+#define BOOK_HPP
 
 class Book {
     public:
