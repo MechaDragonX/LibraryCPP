@@ -20,3 +20,19 @@ Book::Book(string isbn_value, CallNumber call_number, string author_surname, str
 void Book::setPublicationYear() {
     publicationYear = callNumber.year;
 }
+
+const bool Book::operator<(const Book &other) {
+    return callNumber < other.callNumber;
+}
+const bool Book::operator>(const Book &other) {
+    return callNumber > other.callNumber;
+}
+const bool Book::operator==(const Book &other) {
+    return callNumber == other.callNumber;
+}
+const bool Book::operator<=(const Book &other) {
+    return callNumber <= other.callNumber;
+}
+const bool Book::operator>=(const Book &other) {
+    return callNumber >= other.callNumber;
+}

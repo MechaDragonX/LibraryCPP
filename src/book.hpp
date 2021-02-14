@@ -20,6 +20,11 @@ class Book {
         Book(string isbn_value, CallNumber call_number, string author_surname, string title_value, string publisher_value, int page_count);
 
         void setPublicationYear();
+        const bool operator<(const Book &other);
+        const bool operator>(const Book &other);
+        const bool operator==(const Book &other);
+        const bool operator<=(const Book &other);
+        const bool operator>=(const Book &other);
 };
 
 #endif

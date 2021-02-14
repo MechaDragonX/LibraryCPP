@@ -4,6 +4,7 @@
 #include <vector>
 #include "book.hpp"
 #include "call_number.hpp"
+#include "catalog.hpp"
 using namespace std;
 
 int main() {
@@ -20,7 +21,7 @@ int main() {
     //         &cutIds,
     //         2010
     //     );
-    Book book(
+    Book book1(
             "978-3-16-148410-0",
             CallNumber(
                 "PT",
@@ -35,9 +36,23 @@ int main() {
             560
         );
     
-    cout << "ISBN: " + book.isbn << endl;
-    cout << "Call Number: " + book.callNumber.fullCallNumber << endl;
-    cout << "Author's Surname: " + book.authorSurname << endl;
-    cout << "Title: " + book.title << endl;
-    cout << "Number of Pages: " << book.pageCount << endl;
+    Book book2(
+            "973-2-43-810267-1",
+            CallNumber(
+                "ML",
+                881,
+                "D",
+                2,
+                1988
+            ),
+            "Vascovitch",
+            "A book",
+            "A Company",
+            347
+        );
+
+    cout << "Book 1: " + book1.callNumber.fullCallNumber << endl;
+    cout << "Book 2: " + book2.callNumber.fullCallNumber << endl;
+    bool op = book1 < book2;
+    cout << op << endl;
 }

@@ -49,3 +49,114 @@ CallNumber::CallNumber(string class_name, int class_id, string cutter_name, int 
 string CallNumber::toString() {
     return fullCallNumber;
 }
+
+const bool CallNumber::operator<(const CallNumber &other) {
+    if(className[0] < other.className[0]) {
+        return true;
+    }
+    if(className[1] < other.className[1]) {
+        return true;
+    }
+    if(classId < other.classId) {
+        return true;
+    }
+    if(cutterNames[0][0] < other.cutterNames[0][0]) {
+        return true;
+    }
+    if(cutterIds[0] < other.cutterIds[0]) {
+        return true;
+    }
+    if(year < other.year) {
+        return true;
+    }
+
+    return false;
+}
+const bool CallNumber::operator>(const CallNumber &other) {
+    if(className[0] > other.className[0]) {
+        return true;
+    }
+    if(className[1] > other.className[1]) {
+        return true;
+    }
+    if(classId > other.classId) {
+        return true;
+    }
+    if(cutterNames[0][0] > other.cutterNames[0][0]) {
+        return true;
+    }
+    if(cutterIds[0] > other.cutterIds[0]) {
+        return true;
+    }
+    if(year > other.year) {
+        return true;
+    }
+    
+    return false;
+}
+const bool CallNumber::operator==(const CallNumber &other) {
+    if(className[0] == other.className[0]) {
+        return true;
+    }
+    if(className[1] == other.className[1]) {
+        return true;
+    }
+    if(classId == other.classId) {
+        return true;
+    }
+    if(cutterNames[0][0] == other.cutterNames[0][0]) {
+        return true;
+    }
+    if(cutterIds[0] == other.cutterIds[0]) {
+        return true;
+    }
+    if(year == other.year) {
+        return true;
+    }
+    
+    return false;
+}
+const bool CallNumber::operator<=(const CallNumber &other) {
+    if(className[0] <= other.className[0]) {
+        return true;
+    }
+    if(className[1] <= other.className[1]) {
+        return true;
+    }
+    if(classId <= other.classId) {
+        return true;
+    }
+    if(cutterNames[0][0] <= other.cutterNames[0][0]) {
+        return true;
+    }
+    if(cutterIds[0] <= other.cutterIds[0]) {
+        return true;
+    }
+    if(year <= other.year) {
+        return true;
+    }
+    
+    return false;
+}
+const bool CallNumber::operator>=(const CallNumber &other) {
+    if(className[0] >= other.className[0]) {
+        return true;
+    }
+    if(className[1] >= other.className[1]) {
+        return true;
+    }
+    if(classId >= other.classId) {
+        return true;
+    }
+    if(cutterNames[0][0] >= other.cutterNames[0][0]) {
+        return true;
+    }
+    if(cutterIds[0] >= other.cutterIds[0]) {
+        return true;
+    }
+    if(year >= other.year) {
+        return true;
+    }
+    
+    return false;
+}

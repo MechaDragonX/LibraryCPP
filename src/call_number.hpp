@@ -26,6 +26,11 @@ class CallNumber {
         // CallNumber(string class_name, int class_id, vector<string> cutter_names, vector<int> cutter_ids, int yr);
 
         string toString();
+        const bool operator<(const CallNumber &other);
+        const bool operator>(const CallNumber &other);
+        const bool operator==(const CallNumber &other);
+        const bool operator<=(const CallNumber &other);
+        const bool operator>=(const CallNumber &other);
 };
 
 #endif
